@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CompteService} from '../services/compte.service';
+import {Compte} from '../models/compte.model'
 
 @Component({
   selector: 'app-comptes',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComptesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private compteHttpService: CompteService) { }
 
+  comptes: Compte[]
   ngOnInit() {
+   this.compteHttpService.getComptes().subscribe(
+    response =>this.handleSuccessfulResponse(response),
+    );
   }
+
+  handleSuccessfulResponse(response)
+{
+    this.comptes=response;
+}
 
 }

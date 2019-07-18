@@ -1,1 +1,32 @@
-<p>comptes works!</p>
+<h2>Listes des comptes</h2>
+
+
+<table>
+    <thead>
+      <tr>
+          <th>Id</th>
+          <th>Rib</th>
+          <th>Numero de compte</th>
+          <th>Solde</th>
+          <th>Decouvert</th>
+          <th>Montant Agios</th>
+          <th>Seuil remuneration</th>
+          <th>Montant remuneration</th>
+          <th>Transactions</th>
+          <th>Notifications</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let compte of comptes">
+        <td>{{compte.id}}</td>
+        <td>{{compte.rib}}</td>
+        <td>{{compte.solde}}</td>
+        <td>{{compte.decouvert}}</td>
+        <td>{{compte.mntantAgios}}</td>
+        <td>{{compte.seuilRemuneration}}</td>
+        <td>{{compte.montantRemuneration}}</td>
+        <td>{{compte.transactions}}</td>
+        <td>{{compte.notifications}}</td>
+      </tr>
+    </tbody>
+  </table>
