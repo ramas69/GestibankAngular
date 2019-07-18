@@ -24,6 +24,26 @@ import { DemandeOuvertureComponent } from './demande-ouverture/demande-ouverture
 import { ClientPotentielComponent } from './client-potentiel/client-potentiel.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { AddCompteComponent } from './comptes/add-compte/add-compte.component';
+import { UpdateCompteComponent } from './comptes/update-compte/update-compte.component';
+import { DetailCompteComponent } from './comptes/detail-compte/detail-compte.component';
+import { DeleteCompteComponent } from './comptes/delete-compte/delete-compte.component';
+import { AddTransactionComponent } from './transactions/add-transaction/add-transaction.component';
+import { UpdateTransactionComponent } from './transactions/update-transaction/update-transaction.component';
+import { DetailTransactionComponent } from './transactions/detail-transaction/detail-transaction.component';
+import { DeleteTransactionComponent } from './transactions/delete-transaction/delete-transaction.component';
+import { AddNotificationComponent } from './notifications/add-notification/add-notification.component';
+import { UpdateNotificationComponent } from './notifications/update-notification/update-notification.component';
+import { AddClientPotentielComponent } from './client-potentiel/add-client-potentiel/add-client-potentiel.component';
+import { UpdateClientPotentielComponent } from './client-potentiel/update-client-potentiel/update-client-potentiel.component';
+import { DetailClientPotentielComponent } from './client-potentiel/detail-client-potentiel/detail-client-potentiel.component';
+import { DeleteClientPotentielComponent } from './client-potentiel/delete-client-potentiel/delete-client-potentiel.component';
+import { DetailNotificationComponent } from './notifications/detail-notification/detail-notification.component';
+import { DeleteNotificationComponent } from './notifications/delete-notification/delete-notification.component';
+import { AddRequeteComponent } from './requetes/add-requete/add-requete.component';
+import { UpdateRequeteComponent } from './requetes/update-requete/update-requete.component';
+import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
+import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +69,27 @@ import { HeaderComponent } from './header/header.component';
     DemandeOuvertureComponent,
     ClientPotentielComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddCompteComponent,
+    UpdateCompteComponent,
+    DetailCompteComponent,
+    DeleteCompteComponent,
+    AddTransactionComponent,
+    UpdateTransactionComponent,
+    DetailTransactionComponent,
+    DeleteTransactionComponent,
+    AddNotificationComponent,
+    UpdateNotificationComponent,
+    AddClientPotentielComponent,
+    UpdateClientPotentielComponent,
+    DetailClientPotentielComponent,
+    DeleteClientPotentielComponent,
+    DetailNotificationComponent,
+    DeleteNotificationComponent,
+    AddRequeteComponent,
+    UpdateRequeteComponent,
+    DetailRequeteComponent,
+    DeleteRequeteComponent
   ],
   imports: [
     BrowserModule
