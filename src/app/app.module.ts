@@ -44,6 +44,8 @@ import { AddRequeteComponent } from './requetes/add-requete/add-requete.componen
 import { UpdateRequeteComponent } from './requetes/update-requete/update-requete.component';
 import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
 import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -92,7 +94,8 @@ import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete
     DeleteRequeteComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
