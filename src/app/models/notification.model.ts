@@ -1,14 +1,13 @@
 import { Compte } from './compte.model';
-export class Transaction {
+
+export class Notification {
 
     private id: number;
-    private montant: number;
-    compte: Compte;
-    private libelle: string;
     private date: Date; 
-
+    private message: string;
+	compte: Compte;
     constructor(){
-        
+
     }
 
 }
