@@ -1,0 +1,26 @@
+<h2>Listes des clientpotentiels Potentiels</h2>
+
+<table>
+    <thead>
+      <tr>
+          <th>nom</th>
+          <th>prenom</th>
+          <th>email</th>
+          <th>adresse</th>
+          <th>telephone</th>
+          <th>revenuMenus</th>
+          <th>piecesJustif</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let clientpotentiel of clientpotentiels">
+        <td>{{clientpotentiel.nom}}</td>
+        <td>{{clientpotentiel.prenon}}</td>
+        <td>{{clientpotentiel.email}}</td>
+        <td>{{clientpotentiel.adresse}}</td>
+        <td>{{clientpotentiel.telephone}}</td>
+        <td>{{clientpotentiel.revenuMenus}}</td>
+        <td>{{clientpotentiel.piecesJustif}}</td>
+      </tr>
+    </tbody>
+  </table>

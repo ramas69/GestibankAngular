@@ -1,0 +1,35 @@
+<h2>Listes des clients</h2>
+
+<table>
+    <thead>
+      <tr>
+          <th>nom</th>
+          <th>prenom</th>
+          <th>email</th>
+          <th>adresse</th>
+          <th>telephone</th>
+          <th>identifiant</th>
+          <th>comptes</th>
+          <th>revenuMenus</th>
+          <th>piecesJustif</th>
+          <th>conseiller</th>
+          <th>requetes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{client.nom}}</td>
+        <td>{{client.prenon}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.adresse}}</td>
+        <td>{{client.telephone}}</td>
+        <td>{{client.identifiant}}</td>
+        <td>{{client.comptes}}</td>
+        <td>{{client.revenuMenus}}</td>
+        <td>{{client.piecesJustif}}</td>
+        <td>{{client.conseiller?.nom}}</td>
+        <td>{{client.requetes}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-comptes></app-comptes>

@@ -45,6 +45,8 @@ import { UpdateRequeteComponent } from './requetes/update-requete/update-requete
 import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
 import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListClientsComponent } from './User/client/list-clients/list-clients.component';
+import { ListClientspotentielsComponent } from './client-potentiel/list-clientspotentiels/list-clientspotentiels.component';
 
 
 @NgModule({
@@ -91,7 +93,9 @@ import { HttpClientModule } from '@angular/common/http';
     AddRequeteComponent,
     UpdateRequeteComponent,
     DetailRequeteComponent,
-    DeleteRequeteComponent
+    DeleteRequeteComponent,
+    ListClientsComponent,
+    ListClientspotentielsComponent
   ],
   imports: [
     BrowserModule,
