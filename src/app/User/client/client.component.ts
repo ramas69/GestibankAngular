@@ -9,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientComponent implements OnInit {
 
-  constructor(private compteHttpService: ClientService) { }
+  constructor(private clientHttpService: ClientService) { }
 
   clients: Client[]
   ngOnInit() {
-   this.compteHttpService.getClients().subscribe(
+   this.clientHttpService.getClients().subscribe(
     response =>this.handleSuccessfulResponse(response),
     );
   }

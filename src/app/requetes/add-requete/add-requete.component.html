@@ -1,1 +1,34 @@
-<p>add-requete works!</p>
+<h2>
+        <p>Ajouter une requete</p>
+</h2> 
+   <form #requeteForm="ngForm" (ngSubmit)="addrequeteForm()" action="/list-requetes"> 
+
+  
+    <ul> 
+           <li> 
+                <div class="input-field col s12">
+                        <select multiple>
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">CHEQUIER 1</option>
+                          <option value="2">DECOUVERT 2</option>
+                          <option value="3">REMUNERATION 3</option>
+                          <option value="3">MOTDEPASSE 3</option>
+                        </select>
+                        <label>Materialize Multiple Select</label>
+                      </div>
+
+               <label for="compte">Compte</label> 
+               <input type="text" name="compte" id="compte" [(ngModel)]="requete.compte" required> 
+
+               <label for="libelle">Libelle</label> 
+               <input type="libelle" name="libelle" id="libelle" [(ngModel)]="requete.libelle" required> 
+   
+               <label for="date">Date</label> 
+               <input type="date" name="date" id="date" [(ngModel)]="requete.date" required>
+               
+           </li>
+       </ul> 
+                     
+      <button type="submit" >Ajouter</button> 
+   
+   </form>
