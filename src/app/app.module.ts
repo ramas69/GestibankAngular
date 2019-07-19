@@ -45,6 +45,9 @@ import { UpdateRequeteComponent } from './requetes/update-requete/update-requete
 import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
 import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ListConseillerComponent } from './User/conseiller/list-conseiller/list-conseiller.component';
+
 
 
 @NgModule({
@@ -91,11 +94,14 @@ import { HttpClientModule } from '@angular/common/http';
     AddRequeteComponent,
     UpdateRequeteComponent,
     DetailRequeteComponent,
-    DeleteRequeteComponent
+    DeleteRequeteComponent,
+    ListConseillerComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
