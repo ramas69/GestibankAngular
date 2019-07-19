@@ -1,3 +1,4 @@
+import { ClientService } from './../services/client.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientPotentielComponent implements OnInit {
 
-  constructor() { }
+  constructor(private compteHttpService: ClientService) { }
 
+  clientspotentiels: ClientPotentielComponent[]
   ngOnInit() {
+   this.compteHttpService.getClientsPotentiels().subscribe(
+    response =>this.handleSuccessfulResponse(response),
+    );
   }
 
+  handleSuccessfulResponse(response)
+{
+    this.clientspotentiels=response;
 }
+}
+
+

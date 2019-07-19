@@ -11,5 +11,5 @@ export class AddClientPotentielComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

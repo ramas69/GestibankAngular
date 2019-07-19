@@ -47,6 +47,9 @@ import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ListClientsComponent } from './User/client/list-clients/list-clients.component';
+import { ListClientspotentielsComponent } from './client-potentiel/list-clientspotentiels/list-clientspotentiels.component';
+
 
 
 const routes: Routes = [
@@ -105,9 +108,14 @@ const routes: Routes = [
     UpdateRequeteComponent,
     DetailRequeteComponent,
     DeleteRequeteComponent,
+<<<<<<< HEAD
     HomeComponent
 
     
+=======
+    ListClientsComponent,
+    ListClientspotentielsComponent
+>>>>>>> 05d22e872b35c1280969450f2f616272fc0d6a91
   ],
   imports: [
     BrowserModule,
