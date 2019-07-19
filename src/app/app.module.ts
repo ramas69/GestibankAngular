@@ -45,17 +45,15 @@ import { UpdateRequeteComponent } from './requetes/update-requete/update-requete
 import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
 import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListClientsComponent } from './User/client/list-clients/list-clients.component';
 import { ListClientspotentielsComponent } from './client-potentiel/list-clientspotentiels/list-clientspotentiels.component';
-import { FormsModule } from '@angular/forms';
 import { NotificationsListComponent } from './notifications/notifications-list/notifications-list.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 import { ListConseillerComponent } from './User/conseiller/list-conseiller/list-conseiller.component';
-
-
-
 
 const routes: Routes = [
   { path:'', component: HomeComponent},
@@ -71,6 +69,10 @@ const routes: Routes = [
   { path:'updateclientspotentiel', component: UpdateClientPotentielComponent},
   { path:'addrequete', component: AddRequeteComponent},
   { path:'admin', component: AdminComponent},
+  { path:'clients', component: AdminComponent},
+  { path:'clients/:id', component: DetailClientComponent},
+  { path:'conseillers', component: ConseillerComponent},
+  { path:'conseillers/:id', component: DetailConseillerComponent},
   { path:'login', component: LoginComponent
 },
 ];
@@ -122,16 +124,15 @@ const routes: Routes = [
     HomeComponent,
     ListClientsComponent,
     ListClientspotentielsComponent,
-    NotificationsListComponent,
     LoginComponent,
     ListConseillerComponent
-
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]

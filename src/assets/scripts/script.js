@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-   $(document).ready(function(){
-    $('select').formSelect();
-  });
-      
-=======
 $(document).ready(function(){
     $('.slider').slider({
           indicators: false,
@@ -28,4 +22,3 @@ $(document).ready(function(){
   });
 
   
->>>>>>> 081b4e1d79de427b0a3c7e0b9311bdee3ee286ec
