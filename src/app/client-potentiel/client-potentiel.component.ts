@@ -13,9 +13,15 @@ export class ClientPotentielComponent implements OnInit {
 
   clientspotentiels: ClientPotentielComponent[]
   ngOnInit() {
+
   //  this.clientpotentielHttpService.getClientsPotentiels().subscribe(
   //   response =>this.handleSuccessfulResponse(response),
   //   );
+
+  /* this.compteHttpService.getClientsPotentiels().subscribe(
+    response =>this.handleSuccessfulResponse(response),
+    );*/
+
   }
 
 //   handleSuccessfulResponse(response)

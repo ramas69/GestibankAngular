@@ -1,0 +1,17 @@
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+.card.medium {
+    height: 300px;
+}
+.card img.materialized.active {
+    max-height: none;
+    object-fit: none;
+}
+.caption{
+  margin-top: 6em;
+}
+i.material-icons{
+  background-color: #ff9800;
+}

@@ -50,6 +50,10 @@ import { HomeComponent } from './home/home.component';
 import { ListClientsComponent } from './User/client/list-clients/list-clients.component';
 import { ListClientspotentielsComponent } from './client-potentiel/list-clientspotentiels/list-clientspotentiels.component';
 import { FormsModule } from '@angular/forms';
+import { NotificationsListComponent } from './notifications/notifications-list/notifications-list.component';
+import { LoginComponent } from './login/login.component';
+import { ListConseillerComponent } from './User/conseiller/list-conseiller/list-conseiller.component';
+
 
 
 
@@ -58,7 +62,6 @@ const routes: Routes = [
   { path:'home', component: HomeComponent},
   { path:'comptes', component: ComptesComponent},
   { path:'comptes/:id', component: DetailCompteComponent},
-  { path:'admins', component: AdminComponent},
   { path:'clients', component: ClientComponent},
   { path:'clients/:id', component: DetailClientComponent},
   { path:'conseillers', component: ConseillerComponent},
@@ -66,8 +69,10 @@ const routes: Routes = [
   { path:'clientspotentiels', component: ListClientspotentielsComponent},
   { path:'addclientspotentiel', component: AddClientPotentielComponent},
   { path:'updateclientspotentiel', component: UpdateClientPotentielComponent},
-  { path:'addrequete', component: AddRequeteComponent}
-  
+  { path:'addrequete', component: AddRequeteComponent},
+  { path:'admin', component: AdminComponent},
+  { path:'login', component: LoginComponent
+},
 ];
 @NgModule({
   declarations: [
@@ -116,14 +121,17 @@ const routes: Routes = [
     DeleteRequeteComponent,
     HomeComponent,
     ListClientsComponent,
-    ListClientspotentielsComponent
+    ListClientspotentielsComponent,
+    NotificationsListComponent,
+    LoginComponent,
+    ListConseillerComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes)
-
   ],
   providers: [],
   bootstrap: [AppComponent]

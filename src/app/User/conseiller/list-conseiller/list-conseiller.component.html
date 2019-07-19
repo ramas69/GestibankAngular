@@ -1,0 +1,34 @@
+<h2>Listes des conseillier</h2>
+
+<div class="row">
+<table  class="col s12">
+    <thead>
+      <tr>
+          <th>Id</th>
+          <th>nom</th>
+          <th>prenom</th>
+          <th>adresse</th>
+          <th>email</th>
+          <th>Tel</th>
+          <th>pseudo </th>
+          <th>mdp</th>
+          <!-- <th>detail</th> -->
+          
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let conseiller of listeconseillier">
+        <td>{{conseiller.id}}</td>
+        <td>{{conseiller.nom}}</td>
+        <td>{{conseiller.prenom}}</td>
+        <td>{{conseiller.adresse}}</td>
+        <td>{{conseiller.email}}</td>
+        <td>{{conseiller.tel}}</td>
+        <td>*****</td>
+        <td>*****</td>
+        <!-- <th (Onclick)="getConseillier(conseiller.id)" >detail</th> -->
+
+      </tr>
+    </tbody>
+  </table>
+</div>
