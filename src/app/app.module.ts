@@ -45,8 +45,21 @@ import { UpdateRequeteComponent } from './requetes/update-requete/update-requete
 import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
 import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
+const routes: Routes = [
+  { path:'', component: HomeComponent},
+  { path:'home', component: HomeComponent},
+  { path:'comptes', component: ComptesComponent},
+  { path:'comptes/:id', component: DetailCompteComponent},
+  { path:'admins', component: AdminComponent},
+  { path:'clients', component: AdminComponent},
+  { path:'clients/:id', component: DetailClientComponent},
+  { path:'conseillers', component: ConseillerComponent},
+  { path:'conseillers/:id', component: DetailConseillerComponent},
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,11 +104,16 @@ import { HttpClientModule } from '@angular/common/http';
     AddRequeteComponent,
     UpdateRequeteComponent,
     DetailRequeteComponent,
-    DeleteRequeteComponent
+    DeleteRequeteComponent,
+    HomeComponent
+
+    
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
