@@ -1,15 +1,14 @@
 export class ClientPotentiel {
+    constructor(
+    public id: number,
+    public nom: string,
+    public prenom: string,
+    public email: string,
+    public adresse: string,
+    public telephone: string,
+    public revenuMens: number,
+    public piecesJusti: string
+      ) {}
 
-    private id: number;
-    private nom: string;
-    private prenom: string;
-    private email: string;
-    private adresse: string;
-    private telephone: string;
-    private revenuMens: number;
-    private piecesJusti: string;
-    constructor(){
-
-    }
 
 }

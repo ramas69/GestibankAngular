@@ -1,1 +1,41 @@
-<p>add-conseiller works!</p>
+
+<div class="row">
+    <h2 class="text-center">Ajouter Conseilleir</h2>
+    <!-- nom,prenom,email,adresse,tel,pseudo,mdPass, -->
+    <form class="col s12">
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input  [(ngModel)]="conseillier.nom" placeholder="Nom" name="Nom" class="form-control" id="nom">
+      </div>
+    
+      <div class="form-group">
+        <label for="prenom">Prenom :</label>
+        <input [(ngModel)]="conseillier.prenom" placeholder="Prenom" name="Prenom" class="form-control" id="prenom">
+      </div>
+    
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input [(ngModel)]="conseillier.email" placeholder="Email" name="Email" class="form-control" id="email">
+      </div>
+
+      <div class="form-group">
+        <label for="adresse">Adresse :</label>
+        <input [(ngModel)]="conseillier.adresse" placeholder="Adresse" name="Adresse" class="form-control" id="adresse">
+      </div>
+      <div class="form-group">
+        <label for="tel">Tel :</label>
+        <input [(ngModel)]="conseillier.tel" placeholder="Tel" name="Tel" class="form-control" id="tel">
+      </div>
+      <div class="form-group">
+        <label for="pseudo">Login :</label>
+        <input [(ngModel)]="conseillier.pseudo" placeholder="Pseudo" name="Pseudo" class="form-control" id="pseudo">
+      </div>
+      <div class="form-group">
+        <label for="mdp">Mot de Pass :</label>
+        <input [(ngModel)]="conseillier.mdp" placeholder="mdp" name="mdp" class="form-control" id="mdp">
+      </div>
+    
+      <!-- <button class="btn btn-success" (click)="addConseiller()">Create</button> -->
+      <a class="btn-floating btn-large waves-effect waves-light " (click)="addConseiller()"><i class="material-icons">add</i></a>
+    </form>
+    </div>

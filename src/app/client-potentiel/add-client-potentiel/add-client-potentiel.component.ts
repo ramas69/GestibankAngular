@@ -1,4 +1,9 @@
+import { ClientPotentiel } from './../../models/client-potentiel.model';
+import { ClientService } from './../../services/client.service';
+import { Client } from './../../models/client.model';
+import { ClientpotentielService } from './../../services/clientpotentiel.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-client-potentiel',
@@ -6,10 +11,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-client-potentiel.component.css']
 })
 export class AddClientPotentielComponent implements OnInit {
+  clientpotentiel: ClientPotentiel; 
 
-  constructor() { }
+  constructor(private clientPotentielservice: ClientpotentielService, private _route : ActivatedRoute ) {
+    this.clientpotentiel = new ClientPotentiel(0, "", "", "", "", "", 0, "" );
+   }
 
-  ngOnInit() {
-  }
-  
+  ngOnInit() {}
+addclientpotentielForm(){
+  this.clientPotentielservice.createClientsPotentiel(this.clientpotentiel).subscribe
+    ( data => {
+      alert("Client created successfully.");
+    });
+}
+
 }

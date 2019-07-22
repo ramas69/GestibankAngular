@@ -1,1 +1,33 @@
-<p>update-client-potentiel works!</p>
+<h2>
+        <p>Modifier un client potenciel</p>
+        <p>il faut implimenter findById clientpotentiel</p>
+</h2> 
+   <form #clientpotentielForm="ngForm" (ngSubmit)="updateclientpotentielForm()" action="/list-clientspotentiels"> 
+       <ul> 
+           <li> 
+               <label for="nom">Nom</label> 
+               <input type="text" name="nom" id="nom" [(ngModel)]="clientpotentiel.nom" required> 
+
+               <label for="nom">Prenom</label> 
+               <input type="text" name="prenom" id="prenom" [(ngModel)]="clientpotentiel.prenom" required> 
+
+               <label for="email">Email</label> 
+               <input type="email" name="email" id="email" [(ngModel)]="clientpotentiel.email" required> 
+   
+               <label for="adress">Adress</label> 
+               <input type="text" name="adress" id="adress" [(ngModel)]="clientpotentiel.adress" required>
+               
+               <label for="email">telephone</label> 
+               <input type="text" name="telephone" id="telephone" [(ngModel)]="clientpotentiel.telepone" required> 
+
+               <label for="email">revenus Mensuels</label> 
+               <input type="text" name="revenuMens" id="revenuMens" [(ngModel)]="clientpotentiel.revenuMens" required> 
+
+               <label for="email">pieces Justificatifs</label> 
+               <input type="text" name="piecesJusti" id="piecesJusti" [(ngModel)]="clientpotentiel.piecesJusti" required> 
+           </li>
+       </ul> 
+                       
+      <button type="submit" >Modifier</button> 
+   
+   </form>

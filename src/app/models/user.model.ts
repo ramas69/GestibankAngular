@@ -1,14 +1,17 @@
+import { NOMEM } from 'dns';
+import { PassThrough } from 'stream';
+
 export class User {
 
-    private id: number;
-    private nom: string;
-    private prenom: string;
-    private email: string;
-    private adresse: string;
-    private telephone: string;
-    private pseudo: string;
-    private mdp: string;
-    constructor(){
+
+    constructor(    public id: number,
+        public nom: string,
+        public prenom: string,
+        public email: string,
+        public adresse: string,
+        public telephone: string,
+        public pseudo: string,
+        public mdp: string){
 
     }
 

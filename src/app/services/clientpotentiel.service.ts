@@ -8,8 +8,15 @@ import { ClientPotentiel } from '../models/client-potentiel.model';
 export class ClientpotentielService {
   constructor(private httpClient:HttpClient) { }
 
-  getClients(){
+  public getClientsPotentiels(){
     return this.httpClient.get<ClientPotentiel[]>('http://localhost:8080/SpringWebService/clientsPotentiels/get/all');
-      }
+   }
+   public createClientsPotentiel(clientpotentiel) {
+    return this.httpClient.post<ClientPotentiel>("http://localhost:8080/SpringWebService/clientsPotentiels/create", clientpotentiel);
+  }
 
+
+  public updateclientpotentiel(clientpotentiel){
+    return this.httpClient.put("http://localhost:8080/SpringWebService/clientsPotentiels/update",clientpotentiel );
+  }
 }

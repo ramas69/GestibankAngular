@@ -45,14 +45,15 @@ import { UpdateRequeteComponent } from './requetes/update-requete/update-requete
 import { DetailRequeteComponent } from './requetes/detail-requete/detail-requete.component';
 import { DeleteRequeteComponent } from './requetes/delete-requete/delete-requete.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListClientsComponent } from './User/client/list-clients/list-clients.component';
 import { ListClientspotentielsComponent } from './client-potentiel/list-clientspotentiels/list-clientspotentiels.component';
 import { NotificationsListComponent } from './notifications/notifications-list/notifications-list.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
+import { ListConseillerComponent } from './User/conseiller/list-conseiller/list-conseiller.component';
 
 
 const routes: Routes = [
@@ -60,6 +61,14 @@ const routes: Routes = [
   { path:'home', component: HomeComponent},
   { path:'comptes', component: ComptesComponent},
   { path:'comptes/:id', component: DetailCompteComponent},
+  { path:'clients', component: ClientComponent},
+  { path:'clients/:id', component: DetailClientComponent},
+  { path:'conseillers', component: ConseillerComponent},
+  { path:'conseillers/:id', component: DetailConseillerComponent},
+  { path:'clientspotentiels', component: ListClientspotentielsComponent},
+  { path:'addclientspotentiel', component: AddClientPotentielComponent},
+  { path:'updateclientspotentiel', component: UpdateClientPotentielComponent},
+  { path:'addrequete', component: AddRequeteComponent},
   { path:'admin', component: AdminComponent},
   { path:'clients', component: ClientComponent},
   { path:'clients/:id', component: DetailClientComponent},
@@ -118,15 +127,16 @@ const routes: Routes = [
     ListClientspotentielsComponent,
     NotificationsListComponent,
     LoginComponent,
-   
+    ListConseillerComponent
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule 
+
 
   ],
   providers: [],
