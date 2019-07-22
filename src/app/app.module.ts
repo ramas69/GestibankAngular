@@ -51,6 +51,7 @@ import { ListClientsComponent } from './User/client/list-clients/list-clients.co
 import { ListClientspotentielsComponent } from './client-potentiel/list-clientspotentiels/list-clientspotentiels.component';
 import { NotificationsListComponent } from './notifications/notifications-list/notifications-list.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -60,7 +61,7 @@ const routes: Routes = [
   { path:'comptes', component: ComptesComponent},
   { path:'comptes/:id', component: DetailCompteComponent},
   { path:'admin', component: AdminComponent},
-  { path:'clients', component: AdminComponent},
+  { path:'clients', component: ClientComponent},
   { path:'clients/:id', component: DetailClientComponent},
   { path:'conseillers', component: ConseillerComponent},
   { path:'conseillers/:id', component: DetailConseillerComponent},
@@ -116,12 +117,16 @@ const routes: Routes = [
     ListClientsComponent,
     ListClientspotentielsComponent,
     NotificationsListComponent,
-    LoginComponent
+    LoginComponent,
+   
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule 
 
   ],
   providers: [],
